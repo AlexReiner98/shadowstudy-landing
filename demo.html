@@ -4,34 +4,77 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shadow Study for Rhino — Demo & Walkthrough</title>
-  <meta name="description" content="See how Shadow Study generates compliant shadow diagrams inside Rhino. One‑click operation, instant submission‑ready results." />
+  <meta name="description" content="See how Shadow Study generates compliant shadow diagrams inside Rhino. One-click operation, instant submission-ready results." />
   <link rel="icon" href="/favicon.ico" />
+
   <style>
-    :root{--bg:#0a0a0a;--fg:#f7f7f7;--muted:#bdbdbd;--line:#222;--accent:#61f4d3;}
+    /* =============================
+       COLOR LEGEND — Single source of truth
+       Change these values to theme the site
+       ============================= */
+    :root{
+      /* Core palette */
+      --bg:           #e1e5e9;   /* page background */
+      --fg:           #181818;   /* primary text */
+      --muted:        #535353;   /* secondary text */
+      --muted-2:      #9a9a9a;   /* footer/tertiary text */
+      --line:         #d1d1d1;   /* borders/dividers */
+
+      /* Surfaces */
+      --surface-1:    #f5f5f5;   /* cards, bullets */
+      --surface-2:    #f1f1f1;   /* video wrap background */
+
+      /* Brand / Links / CTAs */
+      --accent:       #4a4e69;   /* primary brand accent */
+      --accent-ink:   #f1edeb;   /* text on accent */
+      --link:         var(--accent);
+
+      /* Buttons */
+      --btn-bg:       #ececec;   /* default button bg */
+      --btn-fg:       var(--fg);
+      --btn-border:   var(--line);
+      --btn-hover-b:  #cecece;   /* hover border */
+
+      --btn-primary-bg: var(--accent);
+      --btn-primary-fg: var(--accent-ink);
+      --btn-primary-border: transparent;
+
+      /* Effects */
+      --glow:         var(--accent);
+    }
+
     html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui;}
-    a{color:var(--accent);text-decoration:none;}
+    a{color:var(--link);text-decoration:none;}
+
     .container{max-width:960px;margin:0 auto;padding:0 20px;}
     header{padding:24px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;}
     .brand{display:flex;gap:10px;align-items:center;color:var(--fg);font-weight:600;}
-    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--accent);}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--glow);}
+
     main{padding:60px 0;}
     h1{font-size:clamp(28px,4vw,48px);line-height:1.1;margin:0 0 16px;}
     p{color:var(--muted);font-size:18px;max-width:720px;}
-    video{width:100%;border-radius:16px;margin:32px 0;border:1px solid var(--line);background:#000;}
+    video{width:100%;border-radius:16px;margin:32px 0;border:1px solid var(--line);background:var(--surface-2);}
+
     .section{padding:40px 0;border-top:1px solid var(--line);}
-    .btn{display:inline-block;margin-top:20px;padding:12px 18px;border-radius:12px;background:var(--accent);color:#02130f;font-weight:600;}
-    footer{padding:40px 0;color:#aaa;text-align:center;border-top:1px solid var(--line);}
+
+    .btn{display:inline-block;margin-top:20px;padding:12px 18px;border-radius:12px;font-weight:600;text-decoration:none;transition:transform .08s ease,border-color .2s ease,background .2s ease;}
+    .btn:hover{transform:translateY(-1px);}
+    .btn.primary{background:var(--btn-primary-bg);color:var(--btn-primary-fg);border:1px solid var(--btn-primary-border);}
+    .btn.ghost{background:transparent;border:1px solid var(--btn-border);color:var(--btn-fg);}
+
+    footer{padding:40px 0;color:var(--muted-2);text-align:center;border-top:1px solid var(--line);}
   </style>
 </head>
 <body>
   <header class="container">
     <a href="/" class="brand"><span class="dot"></span>Shadow&nbsp;Study</a>
-    <a href="/" class="btn" style="background:transparent;border:1px solid var(--line);color:var(--fg);">← Back to site</a>
+    <a href="/" class="btn ghost">← Back to site</a>
   </header>
 
   <main class="container">
     <h1>Walkthrough: from Rhino file to submission diagram</h1>
-    <p>This 2‑minute narrated demo shows exactly how Shadow Study works inside Rhino — opening your model, selecting geometry, generating the shadow diagrams, and exporting the results.</p>
+    <p>This 2-minute narrated demo shows exactly how Shadow Study works inside Rhino — opening your model, selecting geometry, generating the shadow diagrams, and exporting the results.</p>
 
     <video controls poster="/poster-demo.jpg">
       <source src="/walkthrough.mp4" type="video/mp4" />
@@ -46,12 +89,12 @@
         <li>Click <strong>Generate</strong> — diagrams are created instantly within the viewport.</li>
         <li>Results are saved automatically in an organized export folder.</li>
       </ol>
-      <a class="btn" href="/downloads/ShadowStudy-Setup.rhi">Download for Rhino 8</a>
+      <a class="btn primary" href="/downloads/ShadowStudy-Setup.rhi">Download for Rhino 8</a>
     </div>
 
     <div class="section">
       <h2>Need help installing?</h2>
-      <p>After download, double‑click the <code>.rhi</code> file to install. The plugin will appear under <em>Tools → Plugins → Shadow Study</em> in Rhino 8. If you have trouble, reach out at <a href="mailto:hello@shadowstudy.app">hello@shadowstudy.app</a>.</p>
+      <p>After download, double-click the <code>.rhi</code> file to install. The plugin will appear under <em>Tools → Plugins → Shadow Study</em> in Rhino 8. If you have trouble, reach out at <a href="mailto:hello@shadowstudy.app">hello@shadowstudy.app</a>.</p>
     </div>
   </main>
 
