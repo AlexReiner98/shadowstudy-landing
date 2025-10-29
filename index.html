@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shadow Study for Rhino — One‑click, compliant diagrams</title>
+  <meta name="description" content="Compliant shadow studies generated directly inside Rhino. Skip Grasshopper and Photoshop. One click. Real‑world submission ready." />
+  <meta name="robots" content="index,follow" />
+  
+  <meta property="og:title" content="Shadow Study for Rhino — One‑click, compliant diagrams" />
+  <meta property="og:description" content="Compliant shadow studies generated directly inside Rhino. Skip Grasshopper and Photoshop." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --bg:#0a0a0a; --fg:#f7f7f7; --muted:#bdbdbd; --line:#222; --accent:#61f4d3;
+    }
+    html,body{height:100%;}
+    body{margin:0; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height:1.5;}
+    .container{max-width:1080px; margin:0 auto; padding:0 20px;}
+    .grid{display:grid; gap:24px;}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(12px); background:rgba(10,10,10,.6); border-bottom:1px solid var(--line); z-index:50;}
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
+    .brand{display:flex; gap:10px; align-items:center; text-decoration:none; color:var(--fg);}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent);}    
+    .btn{appearance:none; border:1px solid var(--line); background:#111; color:var(--fg); padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:600; display:inline-flex; gap:10px; align-items:center; transition:transform .08s ease, border-color .2s ease, background .2s ease;}
+    .btn:hover{transform:translateY(-1px); border-color:#333;}
+    .btn.primary{background:var(--accent); color:#02130f; border-color:transparent;}
+    .btn.primary:hover{filter:saturate(105%);}    
+    .btn.ghost{background:transparent;}
+    .hero{padding:88px 0 48px; border-bottom:1px solid var(--line);}    
+    .hero h1{font-size: clamp(28px, 4.5vw, 56px); line-height:1.05; letter-spacing:-0.02em; margin:0 0 14px;}
+    .hero p{color:var(--muted); font-size: clamp(16px, 2.2vw, 20px); margin:0 0 22px;}
+    .hero-ctas{display:flex; gap:12px; flex-wrap:wrap;}
+    .section{padding:56px 0; border-bottom:1px solid var(--line);}    
+    .video-wrap{border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#0e0e0e;}
+    video{width:100%; height:auto; display:block;}
+    .cols{display:grid; grid-template-columns:1.1fr .9fr; gap:28px;}
+    @media (max-width: 880px){ .cols{grid-template-columns:1fr;} }
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+    .kpi{border:1px solid var(--line); border-radius:14px; padding:16px; background:#0f0f0f;}
+    .muted{color:var(--muted);}    
+    .bullets{display:grid; gap:12px;}
+    .bullets li{list-style:none; border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:#0f0f0f;}
+    .quote{border-left:3px solid var(--accent); padding:8px 16px; background:#0f0f0f; border-radius:6px;}
+    .logos{display:flex; flex-wrap:wrap; gap:18px; align-items:center; opacity:.8}
+    .logo{height:26px; opacity:.7; filter:grayscale(1);}
+    .cta{padding:64px 0; text-align:center;}
+    footer{padding:36px 0 56px; color:#aaa;}
+    a{color:var(--accent);}    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Shadow Study home">
+        <span class="dot" aria-hidden="true"></span>
+        <strong>Shadow&nbsp;Study</strong>
+      </a>
+      <div class="hero-ctas">
+        <a class="btn ghost" href="/demo.html">Watch demo</a>
+        <a class="btn primary" href="#download">Download for Rhino 8</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container grid">
+        <div class="cols">
+          <div>
+            <h1>Compliant shadow studies inside Rhino</h1>
+            <p>Skip the Grasshopper. Skip the Photoshop. Generate submission‑ready diagrams from your Rhino viewport with a single click.</p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#download">Get started — free trial</a>
+              <a class="btn" href="/demo.html" aria-label="View full walkthrough">Watch 90‑sec demo</a>
+            </div>
+            <p class="muted" style="margin-top:10px">Built for architects preparing development submission packages.</p>
+          </div>
+          <div>
+            <div class="video-wrap" id="demo">
+              <video autoplay muted loop playsinline poster="/poster.jpg">
+                <source src="/demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="muted" style="margin-top:10px">Loop: open file → set geometry → generate → folder populates → zoom to result.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="gap:18px">
+          <h2 style="margin:0">Why it works</h2>
+          <ul class="bullets">
+            <li><strong>One‑click output:</strong> Diagrams generated directly from the active Rhino view — aligned, labeled, export‑ready.</li>
+            <li><strong>Submission‑ready:</strong> Compliant formatting tuned for urban shadow studies in real‑world projects.</li>
+            <li><strong>No detours:</strong> Zero Grasshopper setup. Zero Photoshop cleanup.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid">
+        <h2 style="margin:0">Trusted in real submissions</h2>
+        <p class="quote">“Already used in real‑world submissions — the export is clean and our shadow checks went out the door faster than ever.”</p>
+        <div class="logos" aria-label="Firms using Shadow Study">
+          <img src="/logo-1.svg" class="logo" alt="Firm One" />
+          <img src="/logo-2.svg" class="logo" alt="Firm Two" />
+          <img src="/logo-3.svg" class="logo" alt="Firm Three" />
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="download">
+      <div class="container">
+        <h2 style="margin:0 0 8px">Ready to ship diagrams today?</h2>
+        <p class="muted" style="margin-top:0">Download for Rhino 8 or watch the 90‑second walkthrough.</p>
+        <div class="hero-ctas" style="justify-content:center">
+          <a class="btn primary" href="/downloads/ShadowStudy-Setup.rhi">Download for Rhino 8</a>
+          <a class="btn" href="/demo.html">Watch demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section" style="border-bottom:none">
+    <div class="container">
+      <div class="grid" style="gap:8px">
+        <div class="muted">© <span id="y"></span> Shadow Study. All rights reserved.</div>
+        <div class="muted">Questions? <a href="mailto:hello@shadowstudy.app">hello@shadowstudy.app</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
